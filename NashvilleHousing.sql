@@ -11,6 +11,8 @@ Cleaning data in SQL Queries
 SELECT *
 FROM Portfolio..NashvilleHousing
 
+
+
 --Standardizing Date
 
 
@@ -29,6 +31,7 @@ ADD SaleDateConverted Date;
 
 UPDATE Portfolio..NashvilleHousing
 SET SaleDateConverted = CONVERT(Date,SaleDate)
+
 
 
 --Populating Property Address Column
@@ -157,7 +160,9 @@ SET SoldAsVacant = CASE When SoldAsVacant = 'Y' THEN 'Yes'
 	   END
 
 
+
 --Removing Duplicates
+
 
 
 WITH RowNumCTE AS(
